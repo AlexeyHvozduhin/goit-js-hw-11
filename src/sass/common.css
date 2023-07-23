@@ -1,0 +1,149 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+body {
+  background-color: rgb(223, 223, 223);
+}
+
+.search-form {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; */
+  width: 25rem;
+  height: 100%;
+  margin: 3% 35%;
+  position: relative;
+}
+
+.search-form input {
+  font-size: 2.4rem;
+  width: 25rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  padding: 2rem;
+  transition: all 0.1s;
+  transition-delay: 0.1s;
+
+  color: rgb(70, 70, 70);
+}
+
+.search-form button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  transition: all 0.1s;
+  transition-delay: 0.1s;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.gallery {
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 240px;
+  grid-gap: 12px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-card {
+  height: 215px;
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.photo-img:hover {
+  transform: scale(1.03);
+}
+
+.photo-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.gallery-link:hover {
+  cursor: zoom-in;
+}
+
+.info {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin: 5px 15px;
+}
+
+.info-item {
+  margin: 0;
+  margin-left: 5px;
+}
+
+/* .info .icon {
+  width: 10px;
+  height: 10px;
+
+  fill: black;
+  color: black;
+} */
+
+.info div {
+  display: flex;
+}
+
+.span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+}
+
+.span-like {
+  background-image: url('../images/SVG/heart.svg');
+}
+
+.span-view {
+  background-image: url('../images/SVG/eye.svg');
+}
+
+.span-comment {
+  background-image: url('../images/SVG/bubble2.svg');
+}
+
+.span-download {
+  background-image: url('../images/SVG/cloud-download.svg');
+}
+
+.load-more {
+  display: block;
+  margin: 20px 50%;
+  border-radius: 20%;
+  font-size: 13px;
+  width: 50px;
+  height: 40px;
+  color: #696969;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgb(0, 0, 0);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.load-more:hover {
+  background-color: #ffffff;
+  color: #888888;
+}
